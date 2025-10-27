@@ -15,6 +15,7 @@
     --text-color: black;
     --main-color: #0077FF;
     --shadow-color: rgba(0, 0, 0, .2);
+    --white-color: white;
 }
 
 *::selection{
@@ -49,6 +50,11 @@ header{
     position: sticky;
     top: 0;
     z-index: 100;
+}
+header.header {
+    background-color: var(--bg-color);
+
+
 }
     
 .logo {
@@ -128,10 +134,15 @@ p {
 .footer {
     text-align: center;
     padding: 2rem 5%;
-    background: var(--main-color);
+    background: var(--text-color);
     color: var(--white-color);
 }
 
+.footer.p {
+    color: var(--white-color);
+
+
+}
 .footer-iconTop a {
     font-size: 2rem;
     color: var(--white-color);
