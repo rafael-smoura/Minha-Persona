@@ -7,34 +7,43 @@
     <title>Minha Persona</title>
 
     <!--IMPORTAÇÃO DE ESTILO E ÍCONES-->
-
     <!-- estilo carrosel de imagens-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!--importar ícones prontos-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
+    
+    <!--SCRIPT DE ANIMAÇÃO-->
+    <!-- Animação de deslizar-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Animação de carrosel -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- minha config-->
+    <script src="js/script.js"></script>
 
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Minha Persona</a>
+        <h1 class="logo">Minha Persona</h1>
     
         <nav class="navbar">
-            <a href="#inicio" class="active">Início</a>
-            <a href="#sobre" >Sobre Mim</a>
-            <a href="#valores" >Valores</a>
-            <a href="#hobbies" >Hobbies</a>
+            <ul>
+                <li><a href="#inicio" class="active">Início</a></li>
+                <li><a href="#sobre" >Sobre</a></li>
+                <li><a href="#valores" >Valores</a></li>
+                <li><a href="#hobbies" >Hobbies</a></li>
+            </ul>
         </nav>
-        <div class="bx bx-moon" id="darkMode-icon"></div>
-        <div class="bx bx-menu" id="menu-icon"></div>
-    </header>
-    
+       <div class="header-icons">
+    <div class="bx bx-moon" id="darkMode-icon"></div>
+    <div class="bx bx-menu" id="menu-icon"></div>
+</div>
 
+    </header>
     <section class="inicio" id="inicio">
         <div class="sobre-conteudo">
             <h3>Olá, Eu sou</h3>
             <h1>Rafael Moura</h1>
-
             <h3>
                 Seja bem-vindo(a) ao meu espaço na web. Sou um entusiasta da tecnologia, da arte e das ideias criativas.
             </h3>
@@ -51,7 +60,7 @@
                 <a href="#"><i class='bx bxl-linkedin'></i></a>
             </div>
 
-            <a href="#" class="btn">Veja meu currículo aqui</a>
+    
 
         </div>
         
@@ -85,18 +94,19 @@
             </p>
             
     </section>
-    <section class="valores" id="valores"></section>
-    <h2 class="heading">Meus <span>Valores</span></h2>
-    <p>
-        Acredito que honestidade, dedicação e respeito são fundamentais em tudo o que faço. 
-        Valorizo a busca contínua pelo aprendizado e a responsabilidade em cada projeto, sempre procurando entregar resultados de qualidade. 
-        Também acredito na empatia e na colaboração, pois grandes conquistas acontecem quando trabalhamos juntos e nos conectamos de forma genuína. 
-    </p>
+    <section class="valores" id="valores">
+        <h2 class="heading">Meus <span>Valores</span></h2>
+        <p>
+            Acredito que honestidade, dedicação e respeito são fundamentais em tudo o que faço. 
+            Valorizo a busca contínua pelo aprendizado e a responsabilidade em cada projeto, sempre procurando entregar resultados de qualidade. 
+            Também acredito na empatia e na colaboração, pois grandes conquistas acontecem quando trabalhamos juntos e nos conectamos de forma genuína. 
+        </p>
     
-    <p>
-        Esses valores guiam minhas escolhas, meu crescimento pessoal e a maneira como compartilho meus projetos e ideias. 
-        Para mim, o impacto real vem de unir esforço, ética e cuidado com as pessoas.
-    </p>
+        <p>
+            Esses valores guiam minhas escolhas, meu crescimento pessoal e a maneira como compartilho meus projetos e ideias. 
+            Para mim, o impacto real vem de unir esforço, ética e cuidado com as pessoas.
+        </p>
+    </section>
     
 
     <section class="hobbies" id="hobbies">
@@ -122,7 +132,7 @@
         </div>
 
     </section>
-    
+
     <!--footer -->
     <footer class="footer">
         <div class="footer-text">
@@ -134,15 +144,5 @@
         </div>
     </footer>
 
-    <!-- Animação de deslizar-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- Animação de carrosel -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- minha config-->
-    <script src="js/script.js"></script>
-</body>
-    
 </body>
 </html>
