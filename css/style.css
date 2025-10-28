@@ -25,41 +25,32 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.4rem 6%;
+    padding: 0.4rem 6%; 
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
     background-color: var(--black-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
+/* LOGO RM */
 .rm-img img {
-    height: 40px;
+    height: 40px; 
     width: auto;
 }
 
-/* Ícone do menu (hambúrguer) */
-.menu-icon {
-    display: none;
-    font-size: 2.8rem;
-    color: var(--white-color);
-    cursor: pointer;
-}
-
-/* NAVBAR padrão (desktop) */
 .navbar ul {
     display: flex;
     gap: 3rem;
 }
 
 .navbar li a {
-    font-size: 1.6rem;
+    font-size: 1.6rem; 
     color: var(--white-color);
     transition: color 0.3s;
 }
@@ -74,69 +65,33 @@ header {
     font-size: 2.4rem;
 }
 
-/* ===== NAVBAR MOBILE ===== */
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-
-    .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--black-color);
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.4s ease;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-    }
-
-    .navbar.open {
-        max-height: 400px; /* altura ao abrir */
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.6rem;
-        padding: 1.5rem 0;
-    }
-
-    .navbar li a {
-        font-size: 1.8rem;
-    }
-}
-
-/* ===== INÍCIO ===== */
+/* INÍCIO */
 section.inicio {
     min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 10rem;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
                 url('../assets/fundo.jpg') center/cover fixed;
     color: var(--white-color);
-    padding: 5rem 8%;
-    text-align: center;
+    padding: 5rem 10%;
+    margin-top: -50PX;
 }
 
 .sobre-conteudo h3:first-child {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     font-weight: 400;
 }
 
 .sobre-conteudo h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: 'Dancing Script', cursive;
     color: var(--main-color);
-    margin-bottom: 1rem;
 }
 
 .sobre-conteudo h3:last-of-type {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 400;
     margin-top: 1rem;
 }
@@ -145,11 +100,14 @@ section.inicio {
     font-size: 1.6rem;
     margin-top: 1rem;
     max-width: 600px;
-    margin-inline: auto;
+}
+
+.sobre h2 {
+    font-size: 3rem;
 }
 
 .eu-img img {
-    width: 280px;
+    width: 500px;
     border-radius: 50%;
     transition: transform 0.3s;
 }
@@ -158,93 +116,102 @@ section.inicio {
     transform: scale(1.05);
 }
 
-/* ===== SEÇÕES GERAIS ===== */
-section {
-    padding: 6rem 8%;
+/* SOBRE */
+.sobre {
+    padding: 6rem 10%;
 }
 
-.heading {
-    font-size: 3.4rem;
-    text-align: center;
-    font-weight: 700;
-    color: var(--main-color);
-    margin-bottom: 3rem;
-}
-
-section p {
-    font-size: 1.6rem;
+.sobre p {
+    font-size: 1.7rem;
     margin-bottom: 1.5rem;
 }
 
-/* ===== VALORES ===== */
+/* VALORES */
 .valores {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
-    flex-wrap: wrap;
-    text-align: center;
+    padding: 6rem 10%;
 }
 
 .valores-png img {
-    width: 100%;
-    max-width: 380px;
+    width: 420px;
     border-radius: 12px;
 }
 
-/* ===== HOBBIES ===== */
+/* HOBBIES
+   Fundo preto para a seção inteira, título em --main-color e textos em branco */
 .hobbies {
     display: flex;
     flex-direction: column;
     gap: 7rem;
-    background-color: var(--black-color);
-    color: var(--white-color);
-    text-align: center;
+    padding: 6rem 10%;
+    background-color: var(--black-color); /* fundo preto */
+    color: var(--white-color); /* texto padrão branco para legibilidade */
 }
 
+
 .hobbies .heading {
-    color: var(--main-color);
-    font-size: 3.4rem;
+    text-align: center;
+    font-size: 5rem;
+    color: var(--main-color); /* título em azul */
+    margin-bottom: 2rem;
+}
+
+.hobbies p,
+.hobbies span,
+.hobbies a,
+.hobbies strong,
+.hobbies em,
+.hobbies li,
+.hobbies h4,
+.hobbies h5,
+.hobbies h6 {
+    color: var(--white-color);
 }
 
 .hobby-item {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    text-align: center;
+    justify-content: space-between;
+    gap: 5rem;
+    flex-wrap: wrap;
 }
 
 .hobby-item:nth-child(even) {
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
 }
 
 .hobby-text {
-    flex: 1 1 100%;
+    flex: 1 1 45%;
 }
 
 .hobby-text h3 {
-    font-size: 2.6rem;
-    font-weight: 600;
-    color: var(--main-color);
+    font-size: 2.4rem;
+    color: var(--main-color); /* subtítulos dos hobbies em azul para contraste */
     margin-bottom: 1.2rem;
 }
 
 .hobby-text p {
-    font-size: 1.6rem;
-    color: var(--white-color);
-    margin: 0 auto;
-    max-width: 600px;
+    font-size: 1.7rem;
+    color: var(--white-color); /* parágrafos em branco */
 }
 
+/* Links dentro da seção */
+.hobby-text a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+/* Imagens mantidas sem alteração de cores — se quiser um overlay escuro diga que eu adiciono */
 .hobby-img {
-    flex: 1 1 100%;
+    flex: 1 1 45%;
 }
 
 .hobby-img img {
     width: 100%;
-    max-width: 360px;
+    max-width: 420px;
     border-radius: 10px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease;
@@ -254,7 +221,7 @@ section p {
     transform: scale(1.03);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer {
     text-align: center;
     padding: 3rem;
@@ -267,101 +234,30 @@ section p {
     color: var(--white-color);
     font-size: 2rem;
 }
+.social-media{
+    font-size: 2.3rem;
+}
+.social-media a{
+    text-decoration: none;
+    color: var(--main-color);
+}
 
-/* ===== RESPONSIVIDADE ===== */
-
-/* Tablets */
-@media (max-width: 1024px) {
-    html {
-        font-size: 90%;
-    }
-
-    .inicio,
-    .valores,
-    .hobby-item {
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .inicio, .valores, .hobby-item {
         flex-direction: column;
         text-align: center;
     }
 
     .eu-img img {
-        width: 240px;
-    }
-}
-
-/* Celulares */
-@media (max-width: 768px) {
-    html {
-        font-size: 87%;
-    }
-
-    header {
-        flex-direction: column;
-        gap: 0.6rem;
-    }
-
-    .navbar ul {
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
-
-    .sobre-conteudo h1 {
-        font-size: 4rem;
-    }
-
-    .heading {
-        font-size: 2.8rem;
-    }
-
-    .hobby-text h3 {
-        font-size: 2.2rem;
-    }
-
-    .hobby-text p {
-        font-size: 1.4rem;
-    }
-}
-
-/* Telas pequenas (smartphones) */
-@media (max-width: 480px) {
-    html {
-        font-size: 80%;
-    }
-
-    body {
-        line-height: 1.6;
-    }
-
-    .inicio {
-        padding: 4rem 6%;
-    }
-
-    .sobre-conteudo h1 {
-        font-size: 3.2rem;
-    }
-
-    .sobre-conteudo h3 {
-        font-size: 1.8rem;
-    }
-
-    .sobre-conteudo p {
-        font-size: 1.4rem;
-    }
-
-    .eu-img img {
-        width: 200px;
-    }
-
-    .hobby-img img {
-        width: 100%;
-        max-width: 280px;
+        width: 220px;
     }
 
     .valores-png img {
-        max-width: 280px;
+        width: 320px;
     }
 
-    .footer {
-        font-size: 1.2rem;
-        padding: 2rem;
+    .rm-img img {
+        height: 32px; /* logo menor ainda em telas pequenas */
     }
 }
