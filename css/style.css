@@ -30,12 +30,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 6%;
+    padding: 0.4rem 6%; /* barra mais fina */
     position: sticky;
     top: 0;
     z-index: 100;
     background-color: var(--black-color);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra mais leve */
+}
+
+/* LOGO RM */
+.rm-img img {
+    height: 40px; /* logo menor */
+    width: auto;
 }
 
 .navbar ul {
@@ -44,7 +50,7 @@ header {
 }
 
 .navbar li a {
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* mantém tamanho das opções */
     color: var(--white-color);
     transition: color 0.3s;
 }
@@ -129,22 +135,40 @@ section.inicio {
     border-radius: 12px;
 }
 
-/* HOBBIES */
+/* HOBBIES
+   Fundo preto para a seção inteira, título em --main-color e textos em branco */
 .hobbies {
     display: flex;
     flex-direction: column;
     gap: 7rem;
     padding: 6rem 10%;
-    background-color: var(--white-color);
+    background-color: var(--black-color); /* fundo preto */
+    color: var(--white-color); /* texto padrão branco para legibilidade */
 }
 
+/* Heading centralizado continua com destaque em --main-color */
 .hobbies .heading {
     text-align: center;
     font-size: 3rem;
-    color: var(--main-color);
+    color: var(--main-color); /* título em azul */
     margin-bottom: 2rem;
 }
 
+/* Força a cor branca para a maioria dos elementos de texto dentro da seção,
+   exceto o título definido acima */
+.hobbies p,
+.hobbies span,
+.hobbies a,
+.hobbies strong,
+.hobbies em,
+.hobbies li,
+.hobbies h4,
+.hobbies h5,
+.hobbies h6 {
+    color: var(--white-color);
+}
+
+/* Itens da lista de hobbies (layout) */
 .hobby-item {
     display: flex;
     align-items: center;
@@ -163,15 +187,22 @@ section.inicio {
 
 .hobby-text h3 {
     font-size: 2.4rem;
-    color: var(--main-color);
+    color: var(--main-color); /* subtítulos dos hobbies em azul para contraste */
     margin-bottom: 1.2rem;
 }
 
 .hobby-text p {
     font-size: 1.7rem;
-    color: var(--black-color);
+    color: var(--white-color); /* parágrafos em branco */
 }
 
+/* Links dentro da seção */
+.hobby-text a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+/* Imagens mantidas sem alteração de cores — se quiser um overlay escuro diga que eu adiciono */
 .hobby-img {
     flex: 1 1 45%;
 }
@@ -215,5 +246,9 @@ section.inicio {
 
     .valores-png img {
         width: 320px;
+    }
+
+    .rm-img img {
+        height: 32px; /* logo menor ainda em telas pequenas */
     }
 }
