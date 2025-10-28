@@ -1,39 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
+    list-style: none;
     font-family: 'Poppins', sans-serif;
 }
 
 :root {
-    --bg-color: #F1F1F1;       /* fundo claro padrão */
-    --text-color: white;        /* texto escuro padrão */
-    --main-color: #0077FF;      /* azul chamativo */
-    --black-color: black;
-    --white-color: #ffffff;     /* branco puro */
-    --shadow-color: rgba(0,0,0,0.1); /* sombra leve para hobbies */
+    --bg-color: #F8F9FB;
+    --main-color: #0077FF;
+    --black-color: #1C1C1C;
+    --white-color: #ffffff;
+    --shadow-color: rgba(0,0,0,0.1);
 }
 
-*::selection {
-    background: var(--main-color);
-    color: var(--bg-color);
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
-/* BODY COM FUNDO */
 body {
+    background-color: var(--bg-color);
     color: var(--black-color);
-    line-height: 1.6;
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
 /* HEADER */
@@ -41,187 +30,190 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 6%; /* header mais fino */
+    padding: 1rem 6%;
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: var(--black-color); /* fundo preto */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* sombra abaixo */
-}
-
-header.header {
     background-color: var(--black-color);
-}
-
-.logo {
-    font-size: 2rem;
-    color: var(--main-color);
-    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .navbar ul {
     display: flex;
-    list-style: none;
+    gap: 3rem;
 }
 
 .navbar li a {
-    font-size: 1.6rem;       /* menor que antes */
+    font-size: 1.6rem;
     color: var(--white-color);
-    font-weight: 300;        /* leve */
     transition: color 0.3s;
-    margin: 0 9rem;          /* links mais compactos */
 }
 
 .navbar li a:hover,
-.nav li a.active {
+.navbar li a.active {
     color: var(--main-color);
 }
 
 .header-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
     color: var(--white-color);
-    cursor: pointer;
+    font-size: 2.4rem;
 }
 
-/* SEÇÕES */
-section {
-    padding: 3.2rem 5%;
-}
-
-/* SEÇÃO INÍCIO COM FUNDO */
+/* INÍCIO */
 section.inicio {
-    background-color: var(--bg-color);
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('../assets/fundo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('../assets/fundo.jpg') center/cover fixed;
     color: var(--white-color);
+    padding: 5rem 10%;
 }
 
-/* CONTEÚDO DA SEÇÃO INÍCIO */
 .sobre-conteudo h3:first-child {
-    font-size: 3rem;
-    font-weight: 500;
-    color: var(--white-color);
+    font-size: 2.6rem;
+    font-weight: 400;
 }
 
 .sobre-conteudo h1 {
-    font-size: 7rem;
-    font-weight: 800;
+    font-size: 6rem;
+    font-family: 'Dancing Script', cursive;
     color: var(--main-color);
-    line-height: 1.2;
-    margin: 1rem 0;
-    letter-spacing: 2px;
 }
 
 .sobre-conteudo h3:last-of-type {
     font-size: 2.2rem;
     font-weight: 400;
-    color: var(--white-color);
-    max-width: 600px;
+    margin-top: 1rem;
 }
 
 .sobre-conteudo p {
     font-size: 1.6rem;
-    color: var(--white-color);
     margin-top: 1rem;
     max-width: 600px;
+}
+
+.eu-img img {
+    width: 320px;
+    border-radius: 50%;
+    transition: transform 0.3s;
 }
 
 .eu-img img:hover {
     transform: scale(1.05);
 }
 
-/* TITULOS */
-h1 {
-    font-size: 6rem;
-    font-weight: 700;
-    color: var(--main-color);
+/* SOBRE */
+.sobre {
+    padding: 6rem 10%;
 }
 
-h2 {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+.sobre p {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
 }
 
-h3 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: .5rem;
+/* VALORES */
+.valores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    padding: 6rem 10%;
 }
 
-p {
-    font-size: 1.6rem;
-    margin-bottom: 1.2rem;
-}
-
-/* SOCIAL MEDIA */
-.social-media a {
-    margin-right: 1rem;
-    font-size: 2rem;
-    color: var(--white-color);
-    transition: color 0.3s;
-}
-.social-media a:hover {
-    color: var(--main-color);
+.valores-png img {
+    width: 420px;
+    border-radius: 12px;
 }
 
 /* HOBBIES */
 .hobbies {
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    padding: 6rem 10%;
+    background-color: var(--white-color);
 }
 
-.hobby {
-    flex: 1 1 250px;
-    padding: 2rem;
+.hobbies .heading {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.hobby-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.hobby-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.hobby-text {
+    flex: 1 1 45%;
+}
+
+.hobby-text h3 {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin-bottom: 1.2rem;
+}
+
+.hobby-text p {
+    font-size: 1.7rem;
+    color: var(--black-color);
+}
+
+.hobby-img {
+    flex: 1 1 45%;
+}
+
+.hobby-img img {
+    width: 100%;
+    max-width: 420px;
     border-radius: 10px;
-    box-shadow: 0 0.5rem 1rem var(--shadow-color);
-    background-color: var(--bg-color);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.hobby-img img:hover {
+    transform: scale(1.03);
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
-    padding: 2rem 5%;
+    padding: 3rem;
     background-color: var(--black-color);
     color: var(--white-color);
+    font-size: 1.4rem;
 }
 
 .footer-iconTop a {
-    font-size: 2rem;
     color: var(--white-color);
+    font-size: 2rem;
 }
 
-/* TEXTOS ALINHADOS */
-.separador-esquerdo h3,
-.separador-esquerdo h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding: 0;
-    margin: 0;
-    
-}
-.separador-esquerdo h1{
-    font-family: 'Dancing Script', cursive;
-}
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .inicio, .valores, .hobby-item {
+        flex-direction: column;
+        text-align: center;
+    }
 
-/* IMAGEM RM */
-.rm-img img {
-    width: 40px;
-    height: auto;
+    .eu-img img {
+        width: 220px;
+    }
+
+    .valores-png img {
+        width: 320px;
+    }
 }
