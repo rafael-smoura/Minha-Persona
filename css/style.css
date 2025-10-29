@@ -71,7 +71,7 @@ section.inicio {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10rem;
+    gap: 2rem;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
                 url('../assets/fundo.jpg') center/cover fixed;
     color: var(--white-color);
@@ -133,6 +133,7 @@ section.inicio {
     align-items: center;
     gap: 4rem;
     padding: 6rem 10%;
+    font-size: 1.4rem;
 }
 
 .valores-png img {
@@ -236,10 +237,22 @@ section.inicio {
 }
 .social-media{
     font-size: 2.3rem;
+    width: 500px;
+    border-radius: 50%;
+    transition: transform 0.3s;
 }
 .social-media a{
     text-decoration: none;
     color: var(--main-color);
+}
+
+
+.social-media a:hover{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
 }
 
 /* RESPONSIVIDADE */
