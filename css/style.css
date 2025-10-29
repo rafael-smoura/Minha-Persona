@@ -25,22 +25,20 @@ body {
     overflow-x: hidden;
 }
 
-/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.4rem 6%; 
+    padding: 0.4rem 6%;
     position: sticky;
     top: 0;
     z-index: 100;
     background-color: var(--black-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* LOGO RM */
 .rm-img img {
-    height: 40px; 
+    height: 40px;
     width: auto;
 }
 
@@ -50,7 +48,7 @@ header {
 }
 
 .navbar li a {
-    font-size: 1.6rem; 
+    font-size: 1.6rem;
     color: var(--white-color);
     transition: color 0.3s;
 }
@@ -65,18 +63,16 @@ header {
     font-size: 2.4rem;
 }
 
-/* INÍCIO */
 section.inicio {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('../assets/fundo.jpg') center/cover fixed;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/fundo.jpg') center/cover fixed;
     color: var(--white-color);
     padding: 5rem 10%;
-    margin-top: -50PX;
+    margin-top: -50px;
 }
 
 .sobre-conteudo h3:first-child {
@@ -116,7 +112,6 @@ section.inicio {
     transform: scale(1.05);
 }
 
-/* SOBRE */
 .sobre {
     padding: 6rem 10%;
 }
@@ -126,7 +121,6 @@ section.inicio {
     margin-bottom: 1.5rem;
 }
 
-/* VALORES */
 .valores {
     display: flex;
     justify-content: space-between;
@@ -141,22 +135,19 @@ section.inicio {
     border-radius: 12px;
 }
 
-/* HOBBIES
-   Fundo preto para a seção inteira, título em --main-color e textos em branco */
 .hobbies {
     display: flex;
     flex-direction: column;
     gap: 7rem;
     padding: 6rem 10%;
-    background-color: var(--black-color); /* fundo preto */
-    color: var(--white-color); /* texto padrão branco para legibilidade */
+    background-color: var(--black-color);
+    color: var(--white-color);
 }
-
 
 .hobbies .heading {
     text-align: center;
     font-size: 5rem;
-    color: var(--main-color); /* título em azul */
+    color: var(--main-color);
     margin-bottom: 2rem;
 }
 
@@ -190,22 +181,20 @@ section.inicio {
 
 .hobby-text h3 {
     font-size: 2.4rem;
-    color: var(--main-color); /* subtítulos dos hobbies em azul para contraste */
+    color: var(--main-color);
     margin-bottom: 1.2rem;
 }
 
 .hobby-text p {
     font-size: 1.7rem;
-    color: var(--white-color); /* parágrafos em branco */
+    color: var(--white-color);
 }
 
-/* Links dentro da seção */
 .hobby-text a {
     color: var(--main-color);
     text-decoration: underline;
 }
 
-/* Imagens mantidas sem alteração de cores — se quiser um overlay escuro diga que eu adiciono */
 .hobby-img {
     flex: 1 1 45%;
 }
@@ -214,7 +203,7 @@ section.inicio {
     width: 100%;
     max-width: 420px;
     border-radius: 10px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
     transition: transform 0.3s ease;
 }
 
@@ -222,7 +211,6 @@ section.inicio {
     transform: scale(1.03);
 }
 
-/* FOOTER */
 .footer {
     text-align: center;
     padding: 3rem;
@@ -235,19 +223,20 @@ section.inicio {
     color: var(--white-color);
     font-size: 2rem;
 }
-.social-media{
+
+.social-media {
     font-size: 2.3rem;
     width: 500px;
     border-radius: 50%;
     transition: transform 0.3s;
 }
-.social-media a{
+
+.social-media a {
     text-decoration: none;
     color: var(--main-color);
 }
 
-
-.social-media a:hover{
+.social-media a:hover {
     transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
@@ -255,9 +244,10 @@ section.inicio {
     -o-transform: scale(1.05);
 }
 
-/* RESPONSIVIDADE */
 @media (max-width: 900px) {
-    .inicio, .valores, .hobby-item {
+    .inicio,
+    .valores,
+    .hobby-item {
         flex-direction: column;
         text-align: center;
     }
@@ -271,6 +261,6 @@ section.inicio {
     }
 
     .rm-img img {
-        height: 32px; /* logo menor ainda em telas pequenas */
+        height: 32px;
     }
 }
