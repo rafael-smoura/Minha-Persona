@@ -2,6 +2,7 @@
 
 ## Descrição
 Site pessoal criado para falar um pouco sobre mim, hobbies e valores. Desenvolvido com **HTML e CSS**.
+Acesse o site aqui: https://rafael-smoura.github.io/Minha-Persona/
 
 ## Tecnologias
 - HTML5  
